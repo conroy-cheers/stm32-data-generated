@@ -1,0 +1,1090 @@
+{
+  "block/ADC": {
+    "description": "Analog to Digital Converter.",
+    "items": [
+      {
+        "name": "ISR",
+        "description": "ADC interrupt and status register.",
+        "byte_offset": 0,
+        "fieldset": "ISR"
+      },
+      {
+        "name": "IER",
+        "description": "ADC interrupt enable register.",
+        "byte_offset": 4,
+        "fieldset": "IER"
+      },
+      {
+        "name": "CR",
+        "description": "ADC control register.",
+        "byte_offset": 8,
+        "fieldset": "CR"
+      },
+      {
+        "name": "CFGR1",
+        "description": "ADC configuration register 1.",
+        "byte_offset": 12,
+        "fieldset": "CFGR1"
+      },
+      {
+        "name": "CFGR2",
+        "description": "ADC configuration register 2.",
+        "byte_offset": 16,
+        "fieldset": "CFGR2"
+      },
+      {
+        "name": "SMPR",
+        "description": "ADC sampling time register.",
+        "byte_offset": 20,
+        "fieldset": "SMPR"
+      },
+      {
+        "name": "AWD1TR",
+        "description": "ADC watchdog threshold register.",
+        "byte_offset": 32,
+        "fieldset": "AWD1TR"
+      },
+      {
+        "name": "AWD2TR",
+        "description": "ADC watchdog threshold register.",
+        "byte_offset": 36,
+        "fieldset": "AWD2TR"
+      },
+      {
+        "name": "CHSELR",
+        "description": "ADC channel selection register.",
+        "byte_offset": 40,
+        "fieldset": "CHSELR"
+      },
+      {
+        "name": "AWD3TR",
+        "description": "ADC watchdog threshold register.",
+        "byte_offset": 44,
+        "fieldset": "AWD3TR"
+      },
+      {
+        "name": "DR",
+        "description": "ADC data register.",
+        "byte_offset": 64,
+        "fieldset": "DR"
+      },
+      {
+        "name": "AWD2CR",
+        "description": "ADC Analog Watchdog 2 Configuration register.",
+        "byte_offset": 160,
+        "fieldset": "AWD2CR"
+      },
+      {
+        "name": "AWD3CR",
+        "description": "ADC Analog Watchdog 3 Configuration register.",
+        "byte_offset": 164,
+        "fieldset": "AWD3CR"
+      },
+      {
+        "name": "CALFACT",
+        "description": "ADC Calibration factor.",
+        "byte_offset": 180,
+        "fieldset": "CALFACT"
+      },
+      {
+        "name": "CCR",
+        "description": "ADC common configuration register.",
+        "byte_offset": 776,
+        "fieldset": "CCR"
+      }
+    ]
+  },
+  "fieldset/AWD1TR": {
+    "description": "ADC watchdog threshold register.",
+    "fields": [
+      {
+        "name": "LT1",
+        "description": "Analog watchdog 1 lower threshold These bits are written by software to define the lower threshold for the analog watchdog. Refer to ADC_AWDxTR) on page 359.",
+        "bit_offset": 0,
+        "bit_size": 12
+      },
+      {
+        "name": "HT1",
+        "description": "Analog watchdog 1 higher threshold These bits are written by software to define the higher threshold for the analog watchdog. Refer to ADC_AWDxTR) on page 359.",
+        "bit_offset": 16,
+        "bit_size": 12
+      }
+    ]
+  },
+  "fieldset/AWD2CR": {
+    "description": "ADC Analog Watchdog 2 Configuration register.",
+    "fields": [
+      {
+        "name": "AWD2CH0",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 0,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH1",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 1,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH2",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 2,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH3",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 3,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH4",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 4,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH5",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 5,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH6",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 6,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH7",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 7,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH8",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 8,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH9",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 9,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH10",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 10,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH11",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 11,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH12",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 12,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH13",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 13,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH14",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 14,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH15",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 15,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH16",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 16,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH17",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 17,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH18",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 18,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH19",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 19,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH20",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 20,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH21",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 21,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2CH22",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 2 (AWD2). Note: The channels selected through ADC_AWD2CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 22,
+        "bit_size": 1
+      }
+    ]
+  },
+  "fieldset/AWD2TR": {
+    "description": "ADC watchdog threshold register.",
+    "fields": [
+      {
+        "name": "LT2",
+        "description": "Analog watchdog 2 lower threshold These bits are written by software to define the lower threshold for the analog watchdog. Refer to ADC_AWDxTR) on page 359.",
+        "bit_offset": 0,
+        "bit_size": 12
+      },
+      {
+        "name": "HT2",
+        "description": "Analog watchdog 2 higher threshold These bits are written by software to define the higher threshold for the analog watchdog. Refer to ADC_AWDxTR) on page 359.",
+        "bit_offset": 16,
+        "bit_size": 12
+      }
+    ]
+  },
+  "fieldset/AWD3CR": {
+    "description": "ADC Analog Watchdog 3 Configuration register.",
+    "fields": [
+      {
+        "name": "AWD3CH0",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 0,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH1",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 1,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH2",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 2,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH3",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 3,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH4",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 4,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH5",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 5,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH6",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 6,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH7",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 7,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH8",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 8,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH9",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 9,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH10",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 10,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH11",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 11,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH12",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 12,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH13",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 13,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH14",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 14,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH15",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 15,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH16",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 16,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH17",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 17,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH18",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 18,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH19",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 19,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH20",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 20,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH21",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 21,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3CH22",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They enable and select the input channels to be guarded by analog watchdog 3 (AWD3). Note: The channels selected through ADC_AWD3CR must be also configured into the ADC_CHSELR registers. Refer to SQ8[3:0] for a definition of channel selection. The software is allowed to write this bit only when ADSTART=0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 22,
+        "bit_size": 1
+      }
+    ]
+  },
+  "fieldset/AWD3TR": {
+    "description": "ADC watchdog threshold register.",
+    "fields": [
+      {
+        "name": "LT3",
+        "description": "Analog watchdog 3lower threshold These bits are written by software to define the lower threshold for the analog watchdog. Refer to ADC_AWDxTR) on page 359.",
+        "bit_offset": 0,
+        "bit_size": 12
+      },
+      {
+        "name": "HT3",
+        "description": "Analog watchdog 3 higher threshold These bits are written by software to define the higher threshold for the analog watchdog. Refer to ADC_AWDxTR) on page 359.",
+        "bit_offset": 16,
+        "bit_size": 12
+      }
+    ]
+  },
+  "fieldset/CALFACT": {
+    "description": "ADC Calibration factor.",
+    "fields": [
+      {
+        "name": "CALFACT",
+        "description": "Calibration factor These bits are written by hardware or by software. Once a calibration is complete, they are updated by hardware with the calibration factors. Software can write these bits with a new calibration factor. If the new calibration factor is different from the current one stored into the analog ADC, it is then applied once a new calibration is launched. Just after a calibration is complete, DATA[6:0] contains the calibration factor. Note: Software can write these bits only when ADEN=1 (ADC is enabled and no calibration is ongoing and no conversion is ongoing). Refer to SQ8[3:0] for a definition of channel selection.",
+        "bit_offset": 0,
+        "bit_size": 7
+      }
+    ]
+  },
+  "fieldset/CCR": {
+    "description": "ADC common configuration register.",
+    "fields": [
+      {
+        "name": "PRESC",
+        "description": "ADC prescaler Set and cleared by software to select the frequency of the clock to the ADC. Other: Reserved Note: Software is allowed to write these bits only when the ADC is disabled (ADCAL = 0, ADSTART = 0, ADSTP = 0, ADDIS = 0 and ADEN = 0).",
+        "bit_offset": 18,
+        "bit_size": 4
+      },
+      {
+        "name": "VREFEN",
+        "description": "VREFINT enable This bit is set and cleared by software to enable/disable the VREFINT. Note: Software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 22,
+        "bit_size": 1
+      },
+      {
+        "name": "TSEN",
+        "description": "Temperature sensor enable This bit is set and cleared by software to enable/disable the temperature sensor. Note: Software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 23,
+        "bit_size": 1
+      }
+    ]
+  },
+  "fieldset/CFGR1": {
+    "description": "ADC configuration register 1.",
+    "fields": [
+      {
+        "name": "DMAEN",
+        "description": "Direct memory access enable This bit is set and cleared by software to enable the generation of DMA requests. This allows the DMA controller to be used to manage automatically the converted data. For more details, refer to . Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 0,
+        "bit_size": 1
+      },
+      {
+        "name": "DMACFG",
+        "description": "Direct memory access configuration This bit is set and cleared by software to select between two DMA modes of operation and is effective only when DMAEN = 1. For more details, refer to page 355 Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 1,
+        "bit_size": 1
+      },
+      {
+        "name": "SCANDIR",
+        "description": "Scan sequence direction This bit is set and cleared by software to select the direction in which the channels is scanned in the sequence. It is effective only if CHSELMOD bit is cleared to 0. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 2,
+        "bit_size": 1
+      },
+      {
+        "name": "RES",
+        "description": "Data resolution These bits are written by software to select the resolution of the conversion. Note: The software is allowed to write these bits only when ADEN = 0.",
+        "bit_offset": 3,
+        "bit_size": 2
+      },
+      {
+        "name": "ALIGN",
+        "description": "Data alignment This bit is set and cleared by software to select right or left alignment. Refer to Data alignment and resolution (oversampling disabled: OVSE = 0) on page 353 Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 5,
+        "bit_size": 1
+      },
+      {
+        "name": "EXTSEL",
+        "description": "External trigger selection These bits select the external event used to trigger the start of conversion (refer to External triggers for details): Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 6,
+        "bit_size": 3
+      },
+      {
+        "name": "EXTEN",
+        "description": "External trigger enable and polarity selection These bits are set and cleared by software to select the external trigger polarity and enable the trigger. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 10,
+        "bit_size": 2
+      },
+      {
+        "name": "OVRMOD",
+        "description": "Overrun management mode This bit is set and cleared by software and configure the way data overruns are managed. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 12,
+        "bit_size": 1
+      },
+      {
+        "name": "CONT",
+        "description": "Single / continuous conversion mode This bit is set and cleared by software. If it is set, conversion takes place continuously until it is cleared. Note: It is not possible to have both discontinuous mode and continuous mode enabled: it is forbidden to set both bits DISCEN = 1 and CONT = 1. The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 13,
+        "bit_size": 1
+      },
+      {
+        "name": "WAIT",
+        "description": "Wait conversion mode This bit is set and cleared by software to enable/disable wait conversion mode.. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 14,
+        "bit_size": 1
+      },
+      {
+        "name": "AUTOFF",
+        "description": "Auto-off mode This bit is set and cleared by software to enable/disable auto-off mode.. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 15,
+        "bit_size": 1
+      },
+      {
+        "name": "DISCEN",
+        "description": "Discontinuous mode This bit is set and cleared by software to enable/disable discontinuous mode. Note: It is not possible to have both discontinuous mode and continuous mode enabled: it is forbidden to set both bits DISCEN = 1 and CONT = 1. The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 16,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSELRMOD",
+        "description": "Mode selection of the ADC_CHSELR register This bit is set and cleared by software to control the ADC_CHSELR feature: Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 21,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD1SGL",
+        "description": "Enable the watchdog on a single channel or on all channels This bit is set and cleared by software to enable the analog watchdog on the channel identified by the AWDCH[4:0] bits or on all the channels Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 22,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD1EN",
+        "description": "Analog watchdog enable This bit is set and cleared by software. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 23,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD1CH",
+        "description": "Analog watchdog channel selection These bits are set and cleared by software. They select the input channel to be guarded by the analog watchdog. ..... Others: Reserved Note: The channel selected by the AWDCH[4:0] bits must be also set into the CHSELR register. The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 26,
+        "bit_size": 5
+      }
+    ]
+  },
+  "fieldset/CFGR2": {
+    "description": "ADC configuration register 2.",
+    "fields": [
+      {
+        "name": "OVSE",
+        "description": "Oversampler Enable This bit is set and cleared by software. Note: Software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 0,
+        "bit_size": 1
+      },
+      {
+        "name": "OVSR",
+        "description": "Oversampling ratio This bit filed defines the number of oversampling ratio. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 2,
+        "bit_size": 3
+      },
+      {
+        "name": "OVSS",
+        "description": "Oversampling shift This bit is set and cleared by software. Others: Reserved Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 5,
+        "bit_size": 4
+      },
+      {
+        "name": "TOVS",
+        "description": "Triggered Oversampling This bit is set and cleared by software. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 9,
+        "bit_size": 1
+      },
+      {
+        "name": "LFTRIG",
+        "description": "Low frequency trigger mode enable This bit is set and cleared by software. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 29,
+        "bit_size": 1
+      },
+      {
+        "name": "CKMODE",
+        "description": "ADC clock mode These bits are set and cleared by software to define how the analog ADC is clocked: In all synchronous clock modes, there is no jitter in the delay from a timer trigger to the start of a conversion. Note: The software is allowed to write these bits only when the ADC is disabled (ADCAL = 0, ADSTART = 0, ADSTP = 0, ADDIS = 0 and ADEN = 0).",
+        "bit_offset": 30,
+        "bit_size": 2
+      }
+    ]
+  },
+  "fieldset/CHSELR": {
+    "description": "ADC channel selection register.",
+    "fields": [
+      {
+        "name": "CHSEL0",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 0,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL1",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 1,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL2",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 2,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL3",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 3,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL4",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 4,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL5",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 5,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL6",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 6,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL7",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 7,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL8",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 8,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL9",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 9,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL10",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 10,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL11",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 11,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL12",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 12,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL13",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 13,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL14",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 14,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL15",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 15,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL16",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 16,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL17",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 17,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL18",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 18,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL19",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 19,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL20",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 20,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL21",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 21,
+        "bit_size": 1
+      },
+      {
+        "name": "CHSEL22",
+        "description": "Channel-x selection These bits are written by software and define which channels are part of the sequence of channels to be converted. Refer to for ADC inputs connected to external channels and internal sources. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). If CCRDY is not yet asserted after channel configuration (writing ADC_CHSELR register or changing CHSELRMOD or SCANDIR), the value written to this bit is ignored.",
+        "bit_offset": 22,
+        "bit_size": 1
+      }
+    ]
+  },
+  "fieldset/CR": {
+    "description": "ADC control register.",
+    "fields": [
+      {
+        "name": "ADEN",
+        "description": "ADC enable command This bit is set by software to enable the ADC. The ADC is effectively ready to operate once the ADRDY flag has been set. It is cleared by hardware when the ADC is disabled, after the execution of the ADDIS command. Note: The software is allowed to set ADEN only when all bits of ADC_CR registers are 0 (ADCAL = 0, ADSTP = 0, ADSTART = 0, ADDIS = 0 and ADEN = 0).",
+        "bit_offset": 0,
+        "bit_size": 1
+      },
+      {
+        "name": "ADDIS",
+        "description": "ADC disable command This bit is set by software to disable the ADC (ADDIS command) and put it into power-down state (OFF state). It is cleared by hardware once the ADC is effectively disabled (ADEN is also cleared by hardware at this time). Note: Setting ADDIS to ‘1’ is only effective when ADEN = 1 and ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 1,
+        "bit_size": 1
+      },
+      {
+        "name": "ADSTART",
+        "description": "ADC start conversion command This bit is set by software to start ADC conversion. Depending on the EXTEN [1:0] configuration bits, a conversion either starts immediately (software trigger configuration) or once a hardware trigger event occurs (hardware trigger configuration). It is cleared by hardware: In single conversion mode (CONT = 0, DISCEN = 0), when software trigger is selected (EXTEN = 00): at the assertion of the end of Conversion Sequence (EOS) flag. In discontinuous conversion mode(CONT = 0, DISCEN = 1), when the software trigger is selected (EXTEN = 00): at the assertion of the end of Conversion (EOC) flag. In all other cases: after the execution of the ADSTP command, at the same time as the ADSTP bit is cleared by hardware. Note: The software is allowed to set ADSTART only when ADEN = 1 and ADDIS = 0 (ADC is enabled and there is no pending request to disable the ADC). After writing to ADC_CHSELR register or changing CHSELRMOD or SCANDIRW, it is mandatory to wait until CCRDY flag is asserted before setting ADSTART, otherwise, the value written to ADSTART is ignored.",
+        "bit_offset": 2,
+        "bit_size": 1
+      },
+      {
+        "name": "ADSTP",
+        "description": "ADC stop conversion command This bit is set by software to stop and discard an ongoing conversion (ADSTP Command). It is cleared by hardware when the conversion is effectively discarded and the ADC is ready to accept a new start conversion command. Note: Setting ADSTP to ‘1’ is only effective when ADSTART = 1 and ADDIS = 0 (ADC is enabled and may be converting and there is no pending request to disable the ADC).",
+        "bit_offset": 4,
+        "bit_size": 1
+      },
+      {
+        "name": "ADVREGEN",
+        "description": "ADC Voltage Regulator Enable This bit is set by software, to enable the ADC internal voltage regulator. The voltage regulator output is available after tADCVREG_SETUP. It is cleared by software to disable the voltage regulator. It can be cleared only if ADEN is et to 0. Note: The software is allowed to program this bit field only when the ADC is disabled (ADCAL = 0, ADSTART = 0, ADSTP = 0, ADDIS = 0 and ADEN = 0).",
+        "bit_offset": 28,
+        "bit_size": 1
+      },
+      {
+        "name": "ADCAL",
+        "description": "ADC calibration This bit is set by software to start the calibration of the ADC. It is cleared by hardware after calibration is complete. Note: The software is allowed to set ADCAL only when the ADC is disabled (ADCAL = 0, ADSTART = 0, ADSTP = 0, ADDIS = 0 and ADEN = 0). The software is allowed to update the calibration factor by writing ADC_CALFACT only when ADEN = 1 and ADSTART = 0 (ADC enabled and no conversion is ongoing).",
+        "bit_offset": 31,
+        "bit_size": 1
+      }
+    ]
+  },
+  "fieldset/DR": {
+    "description": "ADC data register.",
+    "fields": [
+      {
+        "name": "DATA",
+        "description": "Converted data These bits are read-only. They contain the conversion result from the last converted channel. The data are left- or right-aligned as shown in OVSE = 0) on page 353. Just after a calibration is complete, DATA[6:0] contains the calibration factor.",
+        "bit_offset": 0,
+        "bit_size": 16
+      }
+    ]
+  },
+  "fieldset/IER": {
+    "description": "ADC interrupt enable register.",
+    "fields": [
+      {
+        "name": "ADRDYIE",
+        "description": "ADC ready interrupt enable This bit is set and cleared by software to enable/disable the ADC Ready interrupt. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 0,
+        "bit_size": 1
+      },
+      {
+        "name": "EOSMPIE",
+        "description": "End of sampling flag interrupt enable This bit is set and cleared by software to enable/disable the end of the sampling phase interrupt. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 1,
+        "bit_size": 1
+      },
+      {
+        "name": "EOCIE",
+        "description": "End of conversion interrupt enable This bit is set and cleared by software to enable/disable the end of conversion interrupt. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 2,
+        "bit_size": 1
+      },
+      {
+        "name": "EOSIE",
+        "description": "End of conversion sequence interrupt enable This bit is set and cleared by software to enable/disable the end of sequence of conversions interrupt. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 3,
+        "bit_size": 1
+      },
+      {
+        "name": "OVRIE",
+        "description": "Overrun interrupt enable This bit is set and cleared by software to enable/disable the overrun interrupt. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 4,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD1IE",
+        "description": "Analog watchdog 1 interrupt enable This bit is set and cleared by software to enable/disable the analog watchdog interrupt. Note: The Software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 7,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2IE",
+        "description": "Analog watchdog 2 interrupt enable This bit is set and cleared by software to enable/disable the analog watchdog interrupt. Note: The Software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 8,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3IE",
+        "description": "Analog watchdog 3 interrupt enable This bit is set and cleared by software to enable/disable the analog watchdog interrupt. Note: The Software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 9,
+        "bit_size": 1
+      },
+      {
+        "name": "EOCALIE",
+        "description": "End of calibration interrupt enable This bit is set and cleared by software to enable/disable the end of calibration interrupt. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 11,
+        "bit_size": 1
+      },
+      {
+        "name": "CCRDYIE",
+        "description": "Channel Configuration Ready Interrupt enable This bit is set and cleared by software to enable/disable the channel configuration ready interrupt. Note: The software is allowed to write this bit only when ADSTART bit is cleared to 0 (this ensures that no conversion is ongoing).",
+        "bit_offset": 13,
+        "bit_size": 1
+      }
+    ]
+  },
+  "fieldset/ISR": {
+    "description": "ADC interrupt and status register.",
+    "fields": [
+      {
+        "name": "ADRDY",
+        "description": "ADC ready This bit is set by hardware after the ADC has been enabled (ADEN = 1) and when the ADC reaches a state where it is ready to accept conversion requests. It is cleared by software writing 1 to it.",
+        "bit_offset": 0,
+        "bit_size": 1
+      },
+      {
+        "name": "EOSMP",
+        "description": "End of sampling flag This bit is set by hardware during the conversion, at the end of the sampling phase.It is cleared by software by programming it to ‘1’.",
+        "bit_offset": 1,
+        "bit_size": 1
+      },
+      {
+        "name": "EOC",
+        "description": "End of conversion flag This bit is set by hardware at the end of each conversion of a channel when a new data result is available in the ADC_DR register. It is cleared by software writing 1 to it or by reading the ADC_DR register.",
+        "bit_offset": 2,
+        "bit_size": 1
+      },
+      {
+        "name": "EOS",
+        "description": "End of sequence flag This bit is set by hardware at the end of the conversion of a sequence of channels selected by the CHSEL bits. It is cleared by software writing 1 to it.",
+        "bit_offset": 3,
+        "bit_size": 1
+      },
+      {
+        "name": "OVR",
+        "description": "ADC overrun This bit is set by hardware when an overrun occurs, meaning that a new conversion has complete while the EOC flag was already set. It is cleared by software writing 1 to it.",
+        "bit_offset": 4,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD1",
+        "description": "Analog watchdog 1 flag This bit is set by hardware when the converted voltage crosses the values programmed in ADC_TR1 and ADC_HR1 registers. It is cleared by software by programming it to 1.",
+        "bit_offset": 7,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD2",
+        "description": "Analog watchdog 2 flag This bit is set by hardware when the converted voltage crosses the values programmed in ADC_AWD2TR and ADC_AWD2TR registers. It is cleared by software programming it it.",
+        "bit_offset": 8,
+        "bit_size": 1
+      },
+      {
+        "name": "AWD3",
+        "description": "Analog watchdog 3 flag This bit is set by hardware when the converted voltage crosses the values programmed in ADC_AWD3TR and ADC_AWD3TR registers. It is cleared by software by programming it to 1.",
+        "bit_offset": 9,
+        "bit_size": 1
+      },
+      {
+        "name": "EOCAL",
+        "description": "End Of Calibration flag This bit is set by hardware when calibration is complete. It is cleared by software writing 1 to it.",
+        "bit_offset": 11,
+        "bit_size": 1
+      },
+      {
+        "name": "CCRDY",
+        "description": "Channel Configuration Ready flag This flag bit is set by hardware when the channel configuration is applied after programming to ADC_CHSELR register or changing CHSELRMOD or SCANDIR. It is cleared by software by programming it to it. Note: When the software configures the channels (by programming ADC_CHSELR or changing CHSELRMOD or SCANDIR), it must wait until the CCRDY flag rises before configuring again or starting conversions, otherwise the new configuration (or the START bit) is ignored. Once the flag is asserted, if the software needs to configure again the channels, it must clear the CCRDY flag before proceeding with a new configuration.",
+        "bit_offset": 13,
+        "bit_size": 1
+      }
+    ]
+  },
+  "fieldset/SMPR": {
+    "description": "ADC sampling time register.",
+    "fields": [
+      {
+        "name": "SMP1",
+        "description": "Sampling time selection 1 These bits are written by software to select the sampling time that applies to all channels. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 0,
+        "bit_size": 3
+      },
+      {
+        "name": "SMP2",
+        "description": "Sampling time selection 2 These bits are written by software to select the sampling time that applies to all channels. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
+        "bit_offset": 4,
+        "bit_size": 3
+      },
+      {
+        "name": "SMPSEL0",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 8,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL1",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 9,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL2",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 10,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL3",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 11,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL4",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 12,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL5",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 13,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL6",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 14,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL7",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 15,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL8",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 16,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL9",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 17,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL10",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 18,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL11",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 19,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL12",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 20,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL13",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 21,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL14",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 22,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL15",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 23,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL16",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 24,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL17",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 25,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL18",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 26,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL19",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 27,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL20",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 28,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL21",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 29,
+        "bit_size": 1
+      },
+      {
+        "name": "SMPSEL22",
+        "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
+        "bit_offset": 30,
+        "bit_size": 1
+      }
+    ]
+  }
+}
