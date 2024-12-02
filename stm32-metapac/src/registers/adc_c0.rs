@@ -1184,7 +1184,9 @@
                     ),
                     bit_size: 2,
                     array: None,
-                    enumm: None,
+                    enumm: Some(
+                        "Res",
+                    ),
                 },
                 Field {
                     name: "align",
@@ -2220,7 +2222,9 @@
                     ),
                     bit_size: 3,
                     array: None,
-                    enumm: None,
+                    enumm: Some(
+                        "SampleTime",
+                    ),
                 },
                 Field {
                     name: "smp2",
@@ -2234,7 +2238,9 @@
                     ),
                     bit_size: 3,
                     array: None,
-                    enumm: None,
+                    enumm: Some(
+                        "SampleTime",
+                    ),
                 },
                 Field {
                     name: "smpsel0",
@@ -2561,6 +2567,105 @@
             ],
         },
     ],
-    enums: &[],
+    enums: &[
+        Enum {
+            name: "Res",
+            description: None,
+            bit_size: 2,
+            variants: &[
+                EnumVariant {
+                    name: "BITS12",
+                    description: Some(
+                        "12-bit resolution",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "BITS10",
+                    description: Some(
+                        "10-bit resolution",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "BITS8",
+                    description: Some(
+                        "8-bit resolution",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "BITS6",
+                    description: Some(
+                        "6-bit resolution",
+                    ),
+                    value: 3,
+                },
+            ],
+        },
+        Enum {
+            name: "SampleTime",
+            description: None,
+            bit_size: 3,
+            variants: &[
+                EnumVariant {
+                    name: "CYCLES1_5",
+                    description: Some(
+                        "1.5 ADC cycles",
+                    ),
+                    value: 0,
+                },
+                EnumVariant {
+                    name: "CYCLES3_5",
+                    description: Some(
+                        "3.5 ADC cycles",
+                    ),
+                    value: 1,
+                },
+                EnumVariant {
+                    name: "CYCLES7_5",
+                    description: Some(
+                        "7.5 ADC cycles",
+                    ),
+                    value: 2,
+                },
+                EnumVariant {
+                    name: "CYCLES12_5",
+                    description: Some(
+                        "12.5 ADC cycles",
+                    ),
+                    value: 3,
+                },
+                EnumVariant {
+                    name: "CYCLES19_5",
+                    description: Some(
+                        "19.5 ADC cycles",
+                    ),
+                    value: 4,
+                },
+                EnumVariant {
+                    name: "CYCLES39_5",
+                    description: Some(
+                        "39.5 ADC cycles",
+                    ),
+                    value: 5,
+                },
+                EnumVariant {
+                    name: "CYCLES79_5",
+                    description: Some(
+                        "79.5 ADC cycles",
+                    ),
+                    value: 6,
+                },
+                EnumVariant {
+                    name: "CYCLES160_5",
+                    description: Some(
+                        "160.5 ADC cycles",
+                    ),
+                    value: 7,
+                },
+            ],
+        },
+    ],
 };
                 

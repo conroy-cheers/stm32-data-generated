@@ -490,7 +490,8 @@
         "name": "RES",
         "description": "Data resolution These bits are written by software to select the resolution of the conversion. Note: The software is allowed to write these bits only when ADEN = 0.",
         "bit_offset": 3,
-        "bit_size": 2
+        "bit_size": 2,
+        "enum": "RES"
       },
       {
         "name": "ALIGN",
@@ -939,13 +940,15 @@
         "name": "SMP1",
         "description": "Sampling time selection 1 These bits are written by software to select the sampling time that applies to all channels. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
         "bit_offset": 0,
-        "bit_size": 3
+        "bit_size": 3,
+        "enum": "SAMPLE_TIME"
       },
       {
         "name": "SMP2",
         "description": "Sampling time selection 2 These bits are written by software to select the sampling time that applies to all channels. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing).",
         "bit_offset": 4,
-        "bit_size": 3
+        "bit_size": 3,
+        "enum": "SAMPLE_TIME"
       },
       {
         "name": "SMPSEL0",
@@ -1084,6 +1087,76 @@
         "description": "Channel-x sampling time selection These bits are written by software to define which sampling time is used. Note: The software is allowed to write this bit only when ADSTART = 0 (which ensures that no conversion is ongoing). Refer to for the maximum number of channels.",
         "bit_offset": 30,
         "bit_size": 1
+      }
+    ]
+  },
+  "enum/RES": {
+    "bit_size": 2,
+    "variants": [
+      {
+        "name": "Bits12",
+        "description": "12-bit resolution",
+        "value": 0
+      },
+      {
+        "name": "Bits10",
+        "description": "10-bit resolution",
+        "value": 1
+      },
+      {
+        "name": "Bits8",
+        "description": "8-bit resolution",
+        "value": 2
+      },
+      {
+        "name": "Bits6",
+        "description": "6-bit resolution",
+        "value": 3
+      }
+    ]
+  },
+  "enum/SAMPLE_TIME": {
+    "bit_size": 3,
+    "variants": [
+      {
+        "name": "Cycles1_5",
+        "description": "1.5 ADC cycles",
+        "value": 0
+      },
+      {
+        "name": "Cycles3_5",
+        "description": "3.5 ADC cycles",
+        "value": 1
+      },
+      {
+        "name": "Cycles7_5",
+        "description": "7.5 ADC cycles",
+        "value": 2
+      },
+      {
+        "name": "Cycles12_5",
+        "description": "12.5 ADC cycles",
+        "value": 3
+      },
+      {
+        "name": "Cycles19_5",
+        "description": "19.5 ADC cycles",
+        "value": 4
+      },
+      {
+        "name": "Cycles39_5",
+        "description": "39.5 ADC cycles",
+        "value": 5
+      },
+      {
+        "name": "Cycles79_5",
+        "description": "79.5 ADC cycles",
+        "value": 6
+      },
+      {
+        "name": "Cycles160_5",
+        "description": "160.5 ADC cycles",
+        "value": 7
       }
     ]
   }
